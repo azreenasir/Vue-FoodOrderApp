@@ -1,0 +1,102 @@
+{
+    "best-products": [{
+            "id": 1,
+            "code": "K-01",
+            "name": "Sate Ayam",
+            "price": 20.00,
+            "is_ready": true,
+            "image": "sate-ayam.jpg"
+        },
+        {
+            "id": 2,
+            "code": "K-02",
+            "name": "Nasi Goreng Telur",
+            "price": 10.00,
+            "is_ready": true,
+            "image": "nasi-goreng-telor.jpg"
+        },
+        {
+            "id": 3,
+            "code": "K-03",
+            "name": "Nasi Rames",
+            "price": 15.00,
+            "is_ready": true,
+            "image": "nasi-rames.jpg"
+        }
+    ],
+    "products": [{
+            "id": 1,
+            "code": "K-01",
+            "name": "Sate Ayam",
+            "price": 20.00,
+            "is_ready": true,
+            "image": "sate-ayam.jpg"
+        },
+        {
+            "id": 2,
+            "code": "K-02",
+            "name": "Nasi Goreng Telur",
+            "price": 10.00,
+            "is_ready": true,
+            "image": "nasi-goreng-telor.jpg"
+        },
+        {
+            "id": 3,
+            "code": "K-03",
+            "name": "Nasi Rames",
+            "price": 15.00,
+            "is_ready": true,
+            "image": "nasi-rames.jpg"
+        },
+        {
+            "id": 4,
+            "code": "K-04",
+            "name": "Mie Ayam Bakso",
+            "price": 15.00,
+            "is_ready": true,
+            "image": "mie-ayam-bakso.jpg"
+        },
+        {
+            "id": 5,
+            "code": "K-05",
+            "name": "Mie Goreng",
+            "price": 12.00,
+            "is_ready": true,
+            "image": "mie-goreng.jpg"
+        },
+        {
+            "id": 6,
+            "code": "K-06",
+            "name": "Bakso",
+            "price": 12.00,
+            "is_ready": true,
+            "image": "bakso.jpg"
+        },
+        {
+            "id": 7,
+            "code": "K-07",
+            "name": "Pangsit 6 pcs",
+            "price": 10.00,
+            "is_ready": true,
+            "image": "pangsit.jpg"
+        },
+        {
+            "id": 8,
+            "code": "K-08",
+            "name": "Kentang Goreng",
+            "price": 10.00,
+            "is_ready": true,
+            "image": "kentang-goreng.jpg"
+        },
+        {
+            "id": 9,
+            "code": "K-09",
+            "name": "Lontong Opor Ayam",
+            "price": 12.00,
+            "is_ready": true,
+            "image": "lontong-opor-ayam.jpg"
+        }
+    ],
+    "carts": [],
+    "orders": []
+}
