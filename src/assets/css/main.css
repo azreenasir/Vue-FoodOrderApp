@@ -17,3 +17,21 @@
 .card-img-top {
     border-radius: 15px;
 }
+
+.card-product img {
+    height: 235px;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+}
+
+.breadcrumb-item.active {
+    font-weight: bold;
+    color: #000000;
+}
+
+.img-fluid {
+    border-radius: 15px;
+}

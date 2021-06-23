@@ -13,7 +13,7 @@
               <button class="btn btn-lg btn-success">
                 <b-icon-arrow-right-circle scale="0.9" class="mr-2">
                 </b-icon-arrow-right-circle>
-                <router-link to="order">Order</router-link>
+                <router-link :to="{name: 'Foods'}">Order</router-link>
               </button>
             </div>
           </div>

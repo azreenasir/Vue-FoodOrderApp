@@ -1,42 +1,62 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Food Order</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+  <div class="container">
+    <b-navbar toggleable="lg" type="light" >
+      <b-navbar-brand href="#">Food Order</b-navbar-brand>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <router-link exact :to="{ name: 'Home'}" class="nav-link">Home</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link class="nav-link" :to="{ name: 'Foods'}">Foods</router-link>
-                    </li>
-                </ul>
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <router-link :to="{ name: 'Cart'}" class="nav-link">
-                            Cart
-                            <b-icon-bag></b-icon-bag>
-                            <span class="badge badge-success ml-2">0</span>
-                        </router-link>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-    </nav>
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <router-link exact :to="{ name: 'Home' }" class="nav-link"
+            >Home</router-link
+          >
+          <router-link class="nav-link" :to="{ name: 'Foods' }"
+            >Foods</router-link
+          >
+        </b-navbar-nav>
+
+        <!-- Right aligned nav items -->
+        <b-navbar-nav class="ml-auto">
+          <router-link :to="{ name: 'Cart' }" class="nav-link">
+            Cart
+            <b-icon-bag></b-icon-bag>
+            <span class="badge badge-success ml-2">{{
+              updateCart ? updateCart.length : order_quantity.length
+            }}</span>
+          </router-link>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+  </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
-
-}
+  data() {
+    return {
+      order_quantity: []
+    };
+  },
+  props: ["updateCart"],
+  methods: {
+    getTotal(data) {
+      this.order_quantity = data;
+    }
+  },
+  mounted() {
+    axios
+      .get("http://localhost:3000/carts")
+      .then(response => {
+        // handle success
+        this.getTotal(response.data);
+      })
+      .catch(function(error) {
+        // handle error
+        console.log("error", error);
+      });
+  }
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

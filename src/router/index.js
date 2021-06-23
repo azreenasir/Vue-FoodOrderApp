@@ -3,7 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Foods from '../views/Foods.vue'
 import Cart from '../views/Cart.vue'
-
+import FoodDetail from '../views/FoodDetail.vue'
+import OrderSuccess from '../views/OrderSuccess.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,19 @@ const routes = [{
         path: '/cart',
         name: 'Cart',
         component: Cart
+    },
+    {
+        path: '/foods/:id',
+        name: 'FoodDetail',
+        component: FoodDetail,
+        meta: {
+            hideFooter: true,
+        }
+    },
+    {
+        path: '/orders-success',
+        name: 'OrderSuccess',
+        component: OrderSuccess
     }
 ]
 
